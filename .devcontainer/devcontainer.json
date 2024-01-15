@@ -1,13 +1,16 @@
 {
 	"name": "Ubuntu",
-	"dockerFile": "Dockerfile",
+	"image": "mcr.microsoft.com/vscode/devcontainers/base:jammy",
 	"features": {
 		"ghcr.io/devcontainers/features/python:1": {
 			"installTools": false
 		},
 		"ghcr.io/devcontainers/features/aws-cli:1": {},
 		"ghcr.io/devcontainers/features/go:1": {},
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {},
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"moby": false,
+			"dockerDashComposeVersion": "v2"
+		},
 		"ghcr.io/devcontainers-contrib/features/aws-cdk:2": {},
 		"ghcr.io/devcontainers-contrib/features/poetry:2": {}
 	}
