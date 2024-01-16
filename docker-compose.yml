@@ -1,0 +1,30 @@
+version: '3'
+services:
+  minio:
+    image: quay.io/minio/minio:latest
+    networks:
+      - sandbox
+    volumes:
+      - ./minio/data:/data
+    ports:
+      - 9000:9000
+      - 9001:9001
+    command: server /data --console-address ":9001"
+  glue:
+    image: amazon/aws-glue-libs:glue_libs_4.0.0_image_01
+    networks:
+      - sandbox
+    volumes:
+      - ~/.aws:/home/glue_user/.aws
+      - .:/home/glue_user/workspace/jupyter_workspace
+      - ./jupyter:/home/glue_user/jupyter
+    environment:
+      - DISABLE_SSL=true
+    ports:
+      - 4040:4040
+      - 18080:18080
+      - 8998:8998
+      - 8888:8888
+    command: /home/glue_user/jupyter/jupyter_start.sh
+networks:
+  sandbox:
