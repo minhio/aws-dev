@@ -1,4 +1,4 @@
-minio
+docker/minio
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

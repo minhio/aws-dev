@@ -5,7 +5,7 @@ services:
     networks:
       - sandbox
     volumes:
-      - ./minio/data:/data
+      - ./docker/minio/data:/data
     ports:
       - 9000:9000
       - 9001:9001
@@ -16,8 +16,8 @@ services:
       - sandbox
     volumes:
       - ~/.aws:/home/glue_user/.aws
-      - .:/home/glue_user/workspace/jupyter_workspace
-      - ./jupyter:/home/glue_user/jupyter
+      - ./jupyter-notebooks:/home/glue_user/workspace/jupyter_workspace
+      - ./docker/glue/jupyter:/home/glue_user/jupyter
     environment:
       - DISABLE_SSL=true
     ports:
