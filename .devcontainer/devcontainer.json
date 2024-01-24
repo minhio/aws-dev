@@ -16,5 +16,12 @@
 	},
 	"mounts": [
 		"source=/home/devpod/.aws,target=/home/vscode/.aws,type=bind,consistency=cached"
-    ]
+    ],
+	"customizations": {
+		"vscode": {
+		  "extensions": [
+			"github.copilot"
+			]
+		}
+	  }
 }
