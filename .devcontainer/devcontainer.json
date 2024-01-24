@@ -15,6 +15,6 @@
 		"ghcr.io/devcontainers-contrib/features/poetry:2": {}
 	},
 	"mounts": [
-        "source=/home/devpod/.aws,target=/home/vscode/.aws,type=bind,consistency=cached"
+		"source=/home/devpod/.aws,target=/home/vscode/.aws,type=bind,consistency=cached"
     ]
 }
