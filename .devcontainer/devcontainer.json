@@ -1,8 +1,6 @@
 {
 	"name": "Ubuntu",
 	"image": "mcr.microsoft.com/vscode/devcontainers/base:jammy",
-	"remoteUser": "devcontainer",
-	"containerUser": "devcontainer",
 	"features": {
 		"ghcr.io/devcontainers/features/python:1": {
 			"installTools": false
@@ -17,6 +15,6 @@
 		"ghcr.io/devcontainers-contrib/features/poetry:2": {}
 	},
 	"mounts": [
-		"source=/home/devpod/.aws,target=/home/devcontainer/.aws,type=bind,consistency=cached"
+		"source=/home/devpod/.aws,target=/home/vscode/.aws,type=bind,consistency=cached"
     ]
 }
