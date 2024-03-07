@@ -1,0 +1,13 @@
+version: 0.1
+default:
+  global:
+    parameters:
+      region: us-east-1
+      stack_name: jUvhcuqp
+      s3_prefix: jUvhcuqp
+      resolve_s3: true
+      fail_on_empty_changeset: false
+      capabilities:
+        - CAPABILITY_IAM
+        - CAPABILITY_NAMED_IAM
+        - CAPABILITY_AUTO_EXPAND
